@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+            background-color: #020F16;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            /* height: 100vh; */
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* position: fixed; */
+            width: 1200px;
+            top: 27px;
+            z-index: 100;
+        }
+
+        nav .logo {
+            color: #FFF;
+            font-family: "Poppins";
+            font-size: 52.208px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 90px;
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li a {
+            color: #FFF;
+            font-family: "Poppins";
+            font-size: 22.122px;
+            font-weight: 400;
+            text-decoration: none;
+        }
+
+        .up-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 850px;
+            margin-left: 200px;
+            color: #FFF;
+
+        }
+
+        .up {
+            color: #E67F22;
+            font-family: "Poppins";
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .up2 {
+            color: #FFF;
+            text-align: justify;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 400;
+        }
+
+        .aftertext {
+            color: #FFF;
+            text-align: justify;
+            font-family: Poppins;
+            font-size: 12px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 850px;
+            margin-left: 200px;
+            margin-top: 30px;
+
+        }
+
+        .about-us-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+
+        .card {
+            flex-basis: calc(33.33% - 40px);
+            /* background-color: #f0f0f0; */
+            padding: 20px;
+            border-radius: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 0px solid white;
+            border-left-width: 1px;
+            border-bottom-width: 1px;
+
+        }
+
+        .card-content {
+            display: flex;
+            align-items: center;
+        }
+
+        .card img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .card p {
+            /* margin: 0; */
+            font-family: "Poppins", sans-serif;
+            font-size: 10px;
+        }
+
+        .card-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .orange {
+            color: #E67F22;
+            font: "Poppins";
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .white {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+
+        .grey {
+            color: #84898C;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 400;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <nav>
+                <div class="logo">JKB</div>
+
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Counselling</a></li>
+                    <li><a href="#">IT Service</a></li>
+                    <li><a href="./about.html">About us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <div class="wrapper">
+        <div class="up-center">
+            <h3 class="up">About Us</h3>
+            <p class="up2">Welcome to JKB Educational Institute, the epitome of excellence and empowerment in the field
+                of
+                engineering
+                education in India.
+                Led by the visionary director and esteemed tutor, Mr. Vinayak Shete, we are driven by a singular mission
+                to
+                uplift and empower the
+                country's youth. Since our establishment in 2011, we have continuously evolved, creating a nurturing
+                environment and providing
+                outstanding facilities for our students' holistic development.
+            </p>
+        </div>
+        <!-- <div class="images">
+            <img id="img1" src="./images/AU1.png" alt="">
+            <img id="img2" src="./images/AU2.png" alt="">
+        </div> -->
+
+        <div class="about-us-grid">
+            <div class="card">
+                <div class="card-content">
+                    <div> <img src="./images/AU.png" alt="Image 1"></div>
+                    <div class="card-wrapper">
+                        <div class="orange">
+                            Prof Vinayak Shete
+                        </div>
+                        <div class="white">Director</div>
+                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                            Educational & IT
+                            Services , has positively influenced the lives of thousands of aspiring engineers with his
+                            vast teaching experience and deep-rooted passion for yoga and meditation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div> <img src="./images/AU.png" alt="Image 1"></div>
+                    <div class="card-wrapper">
+                        <div class="orange">
+                            Prof Vinayak Shete
+                        </div>
+                        <div class="white">Director</div>
+                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                            Educational & IT
+                            Services , has positively influenced the lives of thousands of aspiring engineers with his
+                            vast teaching experience and deep-rooted passion for yoga and meditation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div> <img src="./images/AU.png" alt="Image 1"></div>
+                    <div class="card-wrapper">
+                        <div class="orange">
+                            Prof Vinayak Shete
+                        </div>
+                        <div class="white">Director</div>
+                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                            Educational & IT
+                            Services , has positively influenced the lives of thousands of aspiring engineers with his
+                            vast teaching experience and deep-rooted passion for yoga and meditation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div> <img src="./images/AU.png" alt="Image 1"></div>
+                    <div class="card-wrapper">
+                        <div class="orange">
+                            Prof Vinayak Shete
+                        </div>
+                        <div class="white">Director</div>
+                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                            Educational & IT
+                            Services , has positively influenced the lives of thousands of aspiring engineers with his
+                            vast teaching experience and deep-rooted passion for yoga and meditation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div> <img src="./images/AU.png" alt="Image 1"></div>
+                    <div class="card-wrapper">
+                        <div class="orange">
+                            Prof Vinayak Shete
+                        </div>
+                        <div class="white">Director</div>
+                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                            Educational & IT
+                            Services , has positively influenced the lives of thousands of aspiring engineers with his
+                            vast teaching experience and deep-rooted passion for yoga and meditation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div> <img src="./images/AU.png" alt="Image 1"></div>
+                    <div class="card-wrapper">
+                        <div class="orange">
+                            Prof Vinayak Shete
+                        </div>
+                        <div class="white">Director</div>
+                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                            Educational & IT
+                            Services , has positively influenced the lives of thousands of aspiring engineers with his
+                            vast teaching experience and deep-rooted passion for yoga and meditation.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="aftertext">
+            <p>At JKB, we believe in delivering the best learning experiences with renowned authors like Prof. N H
+                Dubey, ensuring comprehensive study materials and ample growth opportunities for our students. With Mr.
+                Vinayak Shete's vast teaching experience, we have positively influenced the lives of thousands of
+                aspiring engineers. Moreover, as a testament to our commitment to excellence, we cater to the needs of
+                studying various programming languages and offer corporate linguistic training.
+            </p>
+
+            <p>
+                Beyond academics, we embrace spirituality and mindfulness. Mr. Vinayak Shete is actively associated with
+                The Art Of Living Foundation and serves as a dynamic youth teacher at the AOL. His deep-rooted passion
+                for yoga and meditation resonates within the fabric of our institute, fostering a harmonious and
+                balanced educational experience.
+
+            </p>
+            <p>
+                As you explore our website, you will witness the remarkable success stories that our institute has
+                nurtured, leaving an indelible mark on the educational landscape. Join us at JKB Educational Institute,
+                where knowledge meets inspiration, and dreams turn into reality. Together, Let Us Embark on a
+                Transformative Journey of Education and Empowerment.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
