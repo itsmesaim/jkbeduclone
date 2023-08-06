@@ -50,7 +50,7 @@
         nav ul {
             display: flex;
             align-items: center;
-            gap: 90px;
+            gap: 50px;
             list-style: none;
             margin: 0;
         }
@@ -63,15 +63,105 @@
             text-decoration: none;
         }
 
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #17242B;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            display: block;
+        }
+
+
+        .dropdown-content a:hover {
+            background-color: rgb(46, 70, 83);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: transparent;
+        }
+
+
         .images {
             display: flex;
             gap: 20px;
             margin-top: 20px;
         }
 
+        .container {
+            margin-top: 70px;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .left {
+            flex: 0 0 65%;
+            margin-right: 20px;
+
+        }
+
+        .right {
+            flex: 1;
+            padding: 0 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+        }
+
+        .box {
+            height: 150px;
+            background-color: #0C171C;
+            border-radius: 10px;
+            padding: auto;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            background-color: #13242c;
+        }
+
+        .imgBg {
+            border-radius: 10px 10px 0px 0px;
+            height: 75%;
+            background-size: cover;
+            background-position: center;
+            cursor: progress;
+
+
+        }
+
+        .right-text{
+            padding-top: 2px;
+            text-align: center;
+            color: #E67F22;
+        }
+
+
         .left img,
         .right img {
-            /* Optionally, set some max-width to ensure the images don't exceed their container */
             max-width: 100%;
             height: auto;
         }
@@ -95,7 +185,6 @@
         .text {
             color: #FFF;
             font-family: "Poppins";
-            /* font-size: 27px; */
             font-weight: 700;
         }
 
@@ -146,18 +235,73 @@
             font-weight: 500;
             background-color: #0C171C;
         }
-        .HM3 img{
-            max-width: 100%;
-            height: auto;
-            margin-top: 60px;
-            
+
+        .HM_boxs {
+            display: flex;
+            height: 250px;
+        }
+
+        .HM-left{
+            color: white;
+            width: 55%;
+            margin: 0 10px;
+            display: flex;
 
         }
-        .HM4 img{
+
+
+        .HM-flex{
+            display: flex;
+            flex-direction: column;
+            background-color: #17242B;
+            flex: 1;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+
+        }
+
+        .num {
+            margin: 10px 0;
+            font-size: 23px;
+            color: #E67F22;
+            background-color: #17242B;
+        }
+
+        .HM-right {
+            width: 45%;
+            color: white;
+            padding: 5px 10px;
+            background-color: #17242B;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .head4 {
+            color: #f18a4e;
+            height: 20%;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            background-color: #17242B;
+        }
+
+        .para {
+            font-size: 12px;
+            color: white;
+            background-color: #17242B;
+        }
+
+        .contain {
+            height: 70%;
+        }
+
+
+        .HM4 img {
             max-width: 100%;
             height: auto;
             margin-top: 60px;
-            
+
 
         }
     </style>
@@ -171,7 +315,23 @@
 
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Courses</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Courses</button>
+                            <div class="dropdown-content">
+                                <a href="#">Engg. Admission Counselling</a>
+                                <a href="#">Ist Year Programming</a>
+                                <a href="#">Ist Year Engg. Coaching</a>
+                                <a href="#">IT Services for Start-Up</a>
+                                <a href="#">2nd Year Programming</a>
+                                <a href="#">MS in US & Europe</a>
+                                <a href="#">3rd Year Programming</a>
+                                <a href="#">Project & Placement</a>
+                                <a href="#">Financial Literacy</a>
+                                <a href="#">Youth Empowerment Hub</a>
+                            </div>
+                        </div>
+                    </li>
                     <li><a href="#">Counselling</a></li>
                     <li><a href="#">IT Service</a></li>
                     <li><a href="./about.html">About us</a></li>
@@ -181,7 +341,7 @@
 
     </header>
     <div class="wrapper">
-        <div class="images">
+        <div class="container">
             <div class="left">
                 <img src="./images/HM1.png" alt="">
                 <div class="textcards">
@@ -227,14 +387,120 @@
                 </div>
 
             </div>
-            <div class="right"><img src="./images/HM2.png" alt=""></div>
+            <div class="right">
+                <!-- <img src="./images/HM2.png" alt=""> -->
+                <div class="box">
+                    <div class="imgBg"
+                        style="background-image: url('https://jkbstaticservices.s3.ap-south-1.amazonaws.com/1st-Year-Engg-Counselling.jpg');">
+                    </div>
+                    <div class="right-text">Engg. Admission Counselling</div>
+                </div>
+                <div class="box">
+                    <div class="imgBg" style="background-image: url('./images/ss/2.png');"></div>
+                    <div class="right-text">1st Year Programming</div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/3.png');"></div>
+                        <div class="right-text">1st Year Engg. Couching</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/4.png');"></div>
+                        <div class="right-text">IT Service of Startup</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/5.png');"></div>
+                        <div class="right-text">2nd Year Programming</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/6.png');"></div>
+                        <div class="right-text">MS in US & Europe</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/7.png');"></div>
+                        <div class="right-text">3rd Year Programming</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/8.png');"></div>
+                        <div class="right-text">Project & Placement</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/9.png');"></div>
+                        <div class="right-text">Financial Literacy</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box">
+                        <div class="imgBg" style="background-image: url('./images/ss/10.png');"></div>
+                        <div class="right-text">Youth Empowerment Hub</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="HM3">
-            <img src="./images/HM3.png" alt="">
+    </div>
+    <div class="HM3">
+        <div class="HM_boxs">
+            <div class="HM-left">
+                <div class="HM-flex">
+                    <img src="./images/counselling.png" style="background-color: #17242B;">
+                    <div class="num">45000+</div>
+                    <div style="background-color: #17242B;">Counselling</div>
+                    <div style="background-color: #17242B;">Student</div>
+
+
+                </div>
+                <div class="HM-flex">
+                    <img src="./images/students.png" style="background-color: #17242B;">
+                    <div class="num">10000+</div>
+                    <div style="background-color: #17242B;">Student</div>
+                    <div style="background-color: #17242B;">Trained</div>
+
+
+                </div>
+                <div class="HM-flex">
+                    <img src="./images/startup.png" style="background-color: #17242B;">
+                    <div class="num">250+</div>
+                    <div style="background-color: #17242B;">Start-up</div>
+                    <div style="background-color: #17242B;">Projects</div>
+
+
+                </div>
+            </div>
+
+            <div class="HM-right">
+                <h3 class="head4">4 Years of Mentorship Throughout Your Engineering Journey</h2>
+                    <div class="contain">
+                        <p class="para">Let us embark on a transformative and fulfilling 4-year engineering journey with
+                            JKB
+                            Education & Vinayak sir, where you will be entitled for the following perks<br>
+                            • expert coaching in Ist year of engineering<br>
+                            • preparation of placements in 2nd year<br>
+                            • specialised industrial training through industrial courses in 3rd year<br>
+                            • experience in impactful projects & remarkable placement in final year<br>
+                            You can also opt for MS abroad opportunities, pathways to prestigious careers or
+                            entrepreneurship to build your own startup, or premium government jobs. Unleash your
+                            potential and shape a future that knows no bounds with JKB.
+                        </p>
+                    </div>
+
+            </div>
         </div>
-        <div class="HM4">
-            <img src="./images/HM4.png" alt="">
-        </div>
+    </div>
+    <div class="HM4">
+        <img src="./images/HM4.png" alt="">
+    </div>
     </div>
 
 

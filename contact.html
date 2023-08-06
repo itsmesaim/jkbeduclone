@@ -51,7 +51,7 @@
         nav ul {
             display: flex;
             align-items: center;
-            gap: 90px;
+            gap: 30px;
             list-style: none;
             margin: 0;
         }
@@ -62,6 +62,54 @@
             font-size: 22.122px;
             font-weight: 400;
             text-decoration: none;
+        }
+
+        .dropbtn {
+            background-color: transparent;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            /* position: relative; */
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #17242B;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            /* padding: 12px 16px; */
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: rgb(46, 70, 83);
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: transparent;
         }
 
         h1 {
@@ -141,7 +189,6 @@
             position: relative;
             margin-top: 20px;
         }
-       
     </style>
 
 
@@ -156,7 +203,25 @@
 
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="#">Courses</a></li>
+                    <li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">Courses</button>
+                            <div class="dropdown-content">
+                                <a href="counselling.html">Engg. Admission Counselling</a>
+                                <a href="counselling.html">Ist Year Programming</a>
+                                <a href="counselling.html">Ist Year Engg. Coaching</a>
+                                <a href="counselling.html">IT Services for Start-Up</a>
+                                <a href="counselling.html">2nd Year Programming</a>
+                                <a href="counselling.html">MS in US & Europe</a>
+                                <a href="counselling.html">3rd Year Programming</a>
+                                <a href="counselling.html">Project & Placement</a>
+                                <a href="counselling.html">Financial Literacy</a>
+                                <a href="counselling.html">Youth Empowerment Hub</a>
+                            </div>
+                        </div>
+                    </li>
+                    </li>
                     <li><a href="#">Counselling</a></li>
                     <li><a href="#">IT Service</a></li>
                     <li><a href="./about.html">About us</a></li>
