@@ -302,41 +302,13 @@
 
 <body>
     <header>
-        <div class="wrapper">
-            <nav>
-                <div class="logo">JKB</div>
-
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropbtn">Courses</button>
-                            <div class="dropdown-content">
-                                <a href="#">Engg. Admission Counselling</a>
-                                <a href="#">Ist Year Programming</a>
-                                <a href="#">Ist Year Engg. Coaching</a>
-                                <a href="#">IT Services for Start-Up</a>
-                                <a href="#">2nd Year Programming</a>
-                                <a href="#">MS in US & Europe</a>
-                                <a href="#">3rd Year Programming</a>
-                                <a href="#">Project & Placement</a>
-                                <a href="#">Financial Literacy</a>
-                                <a href="#">Youth Empowerment Hub</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#">Counselling</a></li>
-                    <li><a href="./Itservices.html">IT Service</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                </ul>
-            </nav>
-        </div>
+       {{>navbar}}
 
     </header>
     <div class="wrapper">
         <div class="first">
             <div class="first-left">
-                <img src="./images/desk.png" alt="laptop">
+                <img src="./images/laptop.png" alt="laptop">
             </div>
             <div class="first-right">
                 <div class="first-line"> 3rd Year Engineering Programming</div>
@@ -344,10 +316,12 @@
                     🛑 Gain expertise in various industrial skills through expert training provided
                     by JKBian (Ex-Student) industrial masters having 35+LPA packages.<br>
                     🛑 Various Industrial courses include:<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;•Full-Stack Web Development<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;• Mobile App Development<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;•Machine Learning, Artificial Intelligence & Data Science<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;•Business Intelligence<br>
+                    <ul>
+                        <li>Full-Stack Web Development</li>
+                        <li>Mobile App Development</li>
+                        <li>Machine Learning, Artificial Intelligence & Data Science</li>
+                        <li>Business Intelligence</li>
+                    </ul>
                     🛑 Build industrial projects based on the learnings from the courses <br>
                 </div>
                 <div class="first-flex">
@@ -362,7 +336,7 @@
                 <div class="first-flex">
                     <div class="first-img"><img src="./images/msg.png" alt=""></div>
                     <div class="first-text">TFWS & EWS SEATS</div>
-                    <a href="" class="enroll">Enroll Now</a>
+                    <a href="contact" class="enroll">Enroll Now</a>
                 </div>
             </div>
         </div>
@@ -423,27 +397,7 @@
             </div>
         </div>
         <div class="HM4">
-            <div class="Testimonials">Testimonials</div>
-            <!-- <img src="./images/HM4.png" alt=""> -->
-            <div class="HM4-cards">
-                <div class="cards">
-                    <div class="imgCds"><iframe src="https://www.youtube.com/embed/G5g8Gfo8Qc8"></iframe></div>
-                    <div class="textCds">Chiranjiv Nagrajan</div>
-                </div>
-                <div class="cards">
-                    <div class="imgCds"><iframe src="https://www.youtube.com/embed/MbP4Nq-ngQU"></iframe></div>
-                    <div class="textCds">Pranil Bhalshankar </div>
-                </div>
-
-                <div class="cards">
-                    <div class="imgCds"><iframe src="https://www.youtube.com/embed/4Gg0j29m1CY"></iframe></div>
-                    <div class="textCds">Darshana Nikam</div>
-                </div>
-                <div class="cards">
-                    <div class="imgCds"><iframe src="https://www.youtube.com/embed/_ee8q5YHW1c"></iframe></div>
-                    <div class="textCds">Harshal Bhoir </div>
-                </div>
-            </div>
+            {{>testimonials}}
         </div>
     </div>
 

@@ -25,10 +25,10 @@ app.get('/', function (req, res) {
     // res.sendFile(path.join(__dirname, '/index.html'));
     res.render("index")
 });
-app.get('/home', function (req, res) {
-    // res.sendFile(path.join(__dirname, '/index.html'));
-    res.render("index")
-});
+// app.get('/home', function (req, res) {
+//     // res.sendFile(path.join(__dirname, '/index.html'));
+//     res.render("index")
+// });
 
 app.get('/contact', function (req, res) {
     res.render("contact")
@@ -38,7 +38,45 @@ app.get('/counselling', function (req, res) {
     res.render("counselling")
 });
 
+app.get('/about', function (req, res) {
+    res.render("about")
+});
 
+app.get('/coaching', function (req, res) {
+    res.render("coaching")
+});
+
+app.get('/financial', function (req, res) {
+    res.render("financial")
+});
+
+app.get('/itservices', function (req, res) {
+    res.render("itservices")
+});
+
+app.get('/masters', function (req, res) {
+    res.render("Ms")
+});
+
+app.get('/first-year-programming', function (req, res) {
+    res.render("firstyear")
+});
+
+app.get('/project', function (req, res) {
+    res.render("project")
+});
+
+app.get('/second-year-programming', function (req, res) {
+    res.render("secondyear")
+});
+
+app.get('/third-year-programming', function (req, res) {
+    res.render("thirdyear")
+});
+
+app.get('/youth-empowerment-hub', function (req, res) {
+    res.render("youth")
+});
 // app.get('/about', function (req, res) {
 //     res.sendFile(path.join(__dirname, '/about.html'));
 // })

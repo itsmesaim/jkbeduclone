@@ -5,248 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-        *,
-        *::after,
-        *::before {
-            box-sizing: border-box;
-            background-color: #020F16;
-        }
-
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-        }
-
-        .wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            /* height: 100vh; */
-            width: 100%;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            /* position: fixed; */
-            width: 1200px;
-            top: 27px;
-            z-index: 100;
-        }
-
-        nav .logo {
-            color: #FFF;
-            font-family: "Poppins";
-            font-size: 52.208px;
-            font-weight: 700;
-        }
-
-        nav ul {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            list-style: none;
-            margin: 0;
-        }
-
-        nav ul li a {
-            color: #FFF;
-            font-family: "Poppins";
-            font-size: 22.122px;
-            font-weight: 400;
-            text-decoration: none;
-        }
-
-        .dropbtn {
-            background-color: transparent;
-            color: white;
-            padding: 16px;
-            font-size: 22px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #17242B;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            color: rgb(255, 255, 255);
-            /* padding: 12px 16px; */
-            text-decoration: none;
-            display: block;
-        }
-
-        .dropdown-content a:hover {
-            background-color: rgb(46, 70, 83);
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown:hover .dropbtn {
-            background-color: transparent;
-        }
-
-        .up-center {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 850px;
-            margin-left: 200px;
-            color: #FFF;
-
-        }
-
-        .up {
-            color: #E67F22;
-            font-family: "Poppins";
-            font-size: 35px;
-            font-weight: 700;
-        }
-
-        .up2 {
-            color: #FFF;
-            text-align: justify;
-            font-family: Poppins;
-            font-size: 12px;
-            font-weight: 400;
-        }
-
-        .aftertext {
-            color: #FFF;
-            text-align: justify;
-            font-family: Poppins;
-            font-size: 12px;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 850px;
-            margin-left: 200px;
-            margin-top: 30px;
-
-        }
-
-        .about-us-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-
-        .card {
-            flex-basis: calc(33.33% - 40px);
-            /* background-color: #f0f0f0; */
-            padding: 20px;
-            border-radius: 2px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 0px solid white;
-            border-left-width: 1px;
-            border-bottom-width: 1px;
-
-        }
-
-        .card-content {
-            display: flex;
-            align-items: center;
-        }
-
-        .card img {
-            max-width: 100px;
-            height: auto;
-            margin-right: 20px;
-        }
-
-        .card p {
-            /* margin: 0; */
-            font-family: "Poppins", sans-serif;
-            font-size: 10px;
-        }
-
-        .card-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .orange {
-            color: #E67F22;
-            font: "Poppins";
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .white {
-            color: #FFF;
-            font-family: Poppins;
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-
-        .grey {
-            color: #84898C;
-            font-family: Poppins;
-            font-size: 14px;
-            font-weight: 400;
-
-        }
-
-        
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="wrapper">
-            <nav>
-                <div class="logo">JKB</div>
-
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropbtn">Courses</button>
-                            <div class="dropdown-content">
-                                <a href="#">Engg. Admission Counselling</a>
-                                <a href="#">Ist Year Programming</a>
-                                <a href="#">Ist Year Engg. Coaching</a>
-                                <a href="#">IT Services for Start-Up</a>
-                                <a href="#">2nd Year Programming</a>
-                                <a href="#">MS in US & Europe</a>
-                                <a href="#">3rd Year Programming</a>
-                                <a href="#">Project & Placement</a>
-                                <a href="#">Financial Literacy</a>
-                                <a href="#">Youth Empowerment Hub</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="./couselling .html">Counselling</a></li>
-                    <li><a href="./Itservices.html">IT Service</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                </ul>
-            </nav>
-        </div>
+        {{>navbar}}
 
     </header>
     <div class="wrapper">
@@ -270,90 +34,90 @@
         </div> -->
 
         <div class="about-us-grid">
-            <div class="card">
+            <div class="about-us-card">
                 <div class="card-content">
                     <div> <img src="./images/AU.png" alt="Image 1"></div>
                     <div class="card-wrapper">
-                        <div class="orange">
+                        <div class="about-us-orange">
                             Prof Vinayak Shete
                         </div>
-                        <div class="white">Director</div>
-                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                        <div class="about-us-white">Director</div>
+                        <p class="about-us-grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
                             Educational & IT
                             Services , has positively influenced the lives of thousands of aspiring engineers with his
                             vast teaching experience and deep-rooted passion for yoga and meditation.</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="about-us-card">
                 <div class="card-content">
                     <div> <img src="./images/AU.png" alt="Image 1"></div>
                     <div class="card-wrapper">
-                        <div class="orange">
+                        <div class="about-us-orange">
                             Prof Vinayak Shete
                         </div>
-                        <div class="white">Director</div>
-                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                        <div class="about-us-white">Director</div>
+                        <p class="about-us-grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
                             Educational & IT
                             Services , has positively influenced the lives of thousands of aspiring engineers with his
                             vast teaching experience and deep-rooted passion for yoga and meditation.</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="about-us-card">
                 <div class="card-content">
                     <div> <img src="./images/AU.png" alt="Image 1"></div>
                     <div class="card-wrapper">
-                        <div class="orange">
+                        <div class="about-us-orange">
                             Prof Vinayak Shete
                         </div>
-                        <div class="white">Director</div>
-                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                        <div class="about-us-white">Director</div>
+                        <p class="about-us-grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
                             Educational & IT
                             Services , has positively influenced the lives of thousands of aspiring engineers with his
                             vast teaching experience and deep-rooted passion for yoga and meditation.</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="about-us-card">
                 <div class="card-content">
                     <div> <img src="./images/AU.png" alt="Image 1"></div>
                     <div class="card-wrapper">
-                        <div class="orange">
+                        <div class="about-us-orange">
                             Prof Vinayak Shete
                         </div>
-                        <div class="white">Director</div>
-                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                        <div class="about-us-white">Director</div>
+                        <p class="about-us-grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
                             Educational & IT
                             Services , has positively influenced the lives of thousands of aspiring engineers with his
                             vast teaching experience and deep-rooted passion for yoga and meditation.</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="about-us-card">
                 <div class="card-content">
                     <div> <img src="./images/AU.png" alt="Image 1"></div>
                     <div class="card-wrapper">
-                        <div class="orange">
+                        <div class="about-us-orange">
                             Prof Vinayak Shete
                         </div>
-                        <div class="white">Director</div>
-                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                        <div class="about-us-white">Director</div>
+                        <p class="about-us-grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
                             Educational & IT
                             Services , has positively influenced the lives of thousands of aspiring engineers with his
                             vast teaching experience and deep-rooted passion for yoga and meditation.</p>
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="about-us-card">
                 <div class="card-content">
                     <div> <img src="./images/AU.png" alt="Image 1"></div>
                     <div class="card-wrapper">
-                        <div class="orange">
+                        <div class="about-us-orange">
                             Prof Vinayak Shete
                         </div>
-                        <div class="white">Director</div>
-                        <p class="grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
+                        <div class="about-us-white">Director</div>
+                        <p class="about-us-grey">Mr. Vinayak Shete, the visionary director and esteemed lecturer at JKB
                             Educational & IT
                             Services , has positively influenced the lives of thousands of aspiring engineers with his
                             vast teaching experience and deep-rooted passion for yoga and meditation.</p>
