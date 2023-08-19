@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,100;1,300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,100;1,300&family=Red+Hat+Display:wght@700&display=swap');
 
         *,
         *::after,
         *::before {
             box-sizing: border-box;
             background-color: #020F16;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -51,7 +55,7 @@
         nav ul {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 50px;
             list-style: none;
             margin: 0;
         }
@@ -67,8 +71,8 @@
         .dropbtn {
             background-color: transparent;
             color: white;
-            padding: 22px;
-            font-size: 16px;
+            padding: 16px;
+            font-size: 22px;
             border: none;
             cursor: pointer;
         }
@@ -92,6 +96,7 @@
             display: block;
         }
 
+
         .dropdown-content a:hover {
             background-color: rgb(46, 70, 83);
         }
@@ -100,10 +105,10 @@
             display: block;
         }
 
-
         .dropdown:hover .dropbtn {
             background-color: transparent;
         }
+
 
         h1 {
             color: #E67F22;
@@ -190,37 +195,7 @@
 <body>
 
     <header>
-        <div class="wrapper">
-            <nav>
-                <div class="logo">JKB</div>
-
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li>
-                    <li>
-                        <div class="dropdown">
-                            <button class="dropbtn">Courses</button>
-                            <div class="dropdown-content">
-                                <a href="#">Engg. Admission Counselling</a>
-                                <a href="#">Ist Year Programming</a>
-                                <a href="#">Ist Year Engg. Coaching</a>
-                                <a href="#">IT Services for Start-Up</a>
-                                <a href="#">2nd Year Programming</a>
-                                <a href="#">MS in US & Europe</a>
-                                <a href="#">3rd Year Programming</a>
-                                <a href="#">Project & Placement</a>
-                                <a href="#">Financial Literacy</a>
-                                <a href="#">Youth Empowerment Hub</a>
-                            </div>
-                        </div>
-                    </li>
-                    </li>
-                    <li><a href="./couselling .html">Counselling</a></li>
-                    <li><a href="./Itservices.html">IT Service</a></li>
-                    <li><a href="./about.html">About us</a></li>
-                </ul>
-            </nav>
-        </div>
+        {{>navbar}}
 
     </header>
     <div class="wrapper">
@@ -230,21 +205,21 @@
 
         <!-- <h1>Contact Us</h1> -->
 
-        <form>
+        <form action="contact" method="post">
             <label for="fname" class="white">Name</label><br>
             <input type="text" id="fname" name="fname" placeholder="Click here to enter Name">
             <br>
-            <label for="lname" class="white">Phone Number</label><br>
-            <input type="number" id="lname" name="lname" placeholder="Click here to enter Phone Number"><br>
+            <label for="numb" class="white">Phone Number</label><br>
+            <input type="number" id="lname" name="numb" placeholder="Click here to enter Phone Number"><br>
             <br>
-            <label for="ename" class="white">Email ID</label><br>
-            <input type="text" id="ename" name="ename" placeholder="Click here to enter Email ID">
+            <label for="email" class="white">Email ID</label><br>
+            <input type="text" id="ename" name="email" placeholder="Click here to enter Email ID">
             <br>
-            <label for="sname" class="white">Adress(Area & Location)</label><br>
-            <input type="text" id="sname" name="sname" placeholder="Click here to enter Address">
+            <label for="address" class="white">Adress(Area & Location)</label><br>
+            <input type="text" id="sname" name="address" placeholder="Click here to enter Address">
             <br>
-            <label for="pname" class="white">Enquiry Purpose</label><br>
-            <input type="text" id="pname" name="pname"
+            <label for="purpose" class="white">Enquiry Purpose</label><br>
+            <input type="text" id="pname" name="purpose"
                 placeholder="Click here to write your purpose of contacting Team JKB">
             <br>
             <div class="center">

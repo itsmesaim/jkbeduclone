@@ -2,11 +2,18 @@ const { log } = require('console');
 const express = require('express');
 const path = require('path');
 const hbs = require("hbs");
+const bodyParser = require('body-parser');
 const serveStatic = require('serve-static');
 require("./db/conn");
+const Student = require("./models/register");
+
 
 const app = express();
 const port = process.env.PORT || 8000;
+
+app.use(express.json());
+// app.use(bodyParser.raw());
+app.use(express.urlencoded({ extended: false }));
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -32,6 +39,23 @@ app.get('/', function (req, res) {
 
 app.get('/contact', function (req, res) {
     res.render("contact")
+})
+
+app.post('/contact',  async (req, res)=> {
+    try{
+        const StudentPurpose = new Student({
+            fname: req.body.fname,
+            numb: req.body.numb,
+            email: req.body.email,
+            address: req.body.address,
+            purpose: req.body.purpose,
+        })
+         const Purposed = await StudentPurpose.save();
+        res.status(201).render(index);
+    }
+    catch(error){
+        res.status(400).send(error);
+    }
 });
 
 app.get('/counselling', function (req, res) {
