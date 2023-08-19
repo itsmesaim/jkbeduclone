@@ -2,6 +2,7 @@ const { log } = require('console');
 const express = require('express');
 const path = require('path');
 const hbs = require("hbs");
+const {body, validationResult} = require('express-validator');
 const bodyParser = require('body-parser');
 const serveStatic = require('serve-static');
 require("./db/conn");
@@ -41,8 +42,38 @@ app.get('/contact', function (req, res) {
     res.render("contact")
 })
 
-app.post('/contact',  async (req, res)=> {
-    try{
+// app.post('/contact',  async (req, res)=> {
+//     try{
+//         const StudentPurpose = new Student({
+//             fname: req.body.fname,
+//             numb: req.body.numb,
+//             email: req.body.email,
+//             address: req.body.address,
+//             purpose: req.body.purpose,
+//         })
+//          const Purposed = await StudentPurpose.save();
+//         res.status(201).render("index");
+//     }
+//     catch(error){
+//         res.status(400).send(error);
+//     }
+// });
+
+app.post('/contact', [
+    // Add validation rules here using express-validator
+    body('fname').notEmpty().withMessage('First name is required'),
+    body('numb').notEmpty().withMessage('Number is required'),
+    body('email').isEmail().withMessage('Invalid email'),
+    body('address').notEmpty().withMessage('Address is required'),
+    body('purpose').notEmpty().withMessage('Purpose is required')
+], async (req, res) => {
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()) {
+        return res.status(400).render('contact', { errors: errors.array() });
+    }
+
+    try {
         const StudentPurpose = new Student({
             fname: req.body.fname,
             numb: req.body.numb,
@@ -50,10 +81,9 @@ app.post('/contact',  async (req, res)=> {
             address: req.body.address,
             purpose: req.body.purpose,
         })
-         const Purposed = await StudentPurpose.save();
-        res.status(201).render(index);
-    }
-    catch(error){
+        const Purposed = await StudentPurpose.save();
+        res.status(201).render('contact', { successMessage: 'Form submitted successfully' });
+    } catch (error) {
         res.status(400).send(error);
     }
 });

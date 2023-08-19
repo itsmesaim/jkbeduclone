@@ -187,6 +187,48 @@
             position: relative;
             margin-top: 20px;
         }
+
+        .error {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 20px;
+            background-color: #ef1c1c;
+            border-color: #EF5350;
+            color: white;
+            width: 800px;
+            margin-left: 300px
+        }
+
+        .error>p {
+            background-color: #ef1c1c;
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 25px;
+        }
+
+        .success {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 20px;
+            background-color: #64DD17;
+            border-color: #64DD17;
+            color: white;
+            width: 800px;
+            margin-left: 300px
+        }
+        .success>p {
+            background-color: #64DD17;
+            font-family: "Poppins";
+            font-weight: 700;
+            font-size: 25px;
+        }
+
     </style>
 
 
@@ -226,7 +268,22 @@
                 <input type="submit" value="Submit Details" onclick="Sumbit">
             </div>
         </form>
+        {{#if errors}}
+        <div class="error" style="background-color: #ef1c1c;">
+            {{#each errors}}
+            <p>{{msg}}</p>
+            {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if successMessage}}
+        <div class="success">
+            <p>{{successMessage}}</p>
+        </div>
+        {{/if}}
     </div>
+
+
 </body>
 
 </html>
